@@ -29,7 +29,7 @@ public class MovieController {
     @PutMapping("/add-movie-director-pair")
     public ResponseEntity<String> addDirectorPair(@RequestParam("movie") String movie,@RequestParam("director") String director){
         movieService.createMovieDirectorPair(movie, director);
-        return new ResponseEntity<>("a new movie drector pair has been added",HttpStatus.CREATED);
+        return new ResponseEntity<>("a new movie director pair has been added",HttpStatus.CREATED);
     }
 
     @GetMapping("/get-movie-by-name/{name}")
@@ -65,7 +65,7 @@ public class MovieController {
     @DeleteMapping("/delete-all-directors")
     public ResponseEntity<String> deleteAllDirectors(){
         movieService.deleteAllDirectors();
-        return new ResponseEntity<>("All directors deleted successfully", HttpStatus.CREATED);
+        return new ResponseEntity<>("All directors has been deleted successfully", HttpStatus.CREATED);
     }
 
 
